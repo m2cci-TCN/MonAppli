@@ -1,0 +1,16 @@
+{% load static%} #On charge le fichier static, son contenu
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> #On defini une feuille de style rangée dans static au chemin css/style.css
+</head>
+<body>
+<h1>Acceuil</h1>
+
+<p>Bienvenu sur ma premiere application</p>
+<p>Aujourd'hui nous sommes le {{DATE|date :"D d M Y"}}</p>
+</body>
+</html>
