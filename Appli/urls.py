@@ -1,6 +1,7 @@
 from django.urls import path
 
-from Appli import views
+from MonAppli.MonAppli import views
+
 #ici tous les chemins sont accompagnés de Application/ car définis dans MonAppli.urls
 urlpatterns = [
     path('Acceuil/', views.acceuil, name="Application-Acceuil"),

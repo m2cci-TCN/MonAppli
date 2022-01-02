@@ -14,12 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 
-from Appli import views
+from MonAppli import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path ('Appli/', include("Appli.urls")), #definit un fichier d'accès vers les urls de l'application Application
     path('', views.ouverture, name="Acceuil"),
+    path('Acceuil/', views.acceuil, name="Application-Acceuil"),
+    path('Page-<str:numeropage>/', views.page, name="Application-pages"),
+    # Variable de type string : numeropage #Quand on appelle le chemin finissant par page-01, 01 est récupéré pour être passé en argument de numeropage
 ]
